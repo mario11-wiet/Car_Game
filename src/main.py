@@ -1,16 +1,17 @@
-# This is a sample Python script.
 import pygame
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+import settings
+from Game.Menu.menu import Menu
+
+def main():
+    pygame.init()
+    pygame.font.init()
+    window = pygame.display.set_mode((settings.WINDOW_WIDTH, settings.WINDOW_HEIGHT))
+    pygame.display.set_caption('CAR GAME')
+    menu = Menu(window)
+    menu.start()
+    pygame.quit()
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    main()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
