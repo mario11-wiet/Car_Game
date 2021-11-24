@@ -1,12 +1,19 @@
 import src.GUI.image_load as image
+import src.GUI.convert_image as convert
 import pygame
 
 
 class GameDrawer:
     def __init__(self, window):
-        self.windom = window
+        self.window = window
         self.images = [(image.GRASS, (0, 0)), (image.TRACK, (0, 0))]
 
-    def draw(self):
+    def draw_track(self, car):
         for img, position in self.images:
-            self.windom.blit(img, position)
+            self.window.blit(img, position)
+
+        self.draw_car(car)
+        pygame.display.update()
+
+    def draw_car(self, car):
+        convert.blit_rotate_centre(self.window, car.img, (car.x, car.y), car.angle)

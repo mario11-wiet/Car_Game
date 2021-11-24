@@ -1,6 +1,7 @@
 import pygame
-import src.GUI.image_load as image
+import src.GUI.image_load as images
 import src.GUI.draw_track as draw_track
+import src.Game.Logic.car as car
 
 
 class Menu:
@@ -10,15 +11,17 @@ class Menu:
         self.running = True
         self.clock = pygame.time.Clock()
         self.FPS = 60
+        self.player_car = car.PlayerCar(4, 4, (180, 200), images.RED_CAR)
 
     def start(self):
         while self.running:
             self.clock.tick(self.FPS)
             self.update_screen()
-            pygame.display.update()
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     self.running = False
 
+            self.player_car.action()
+
     def update_screen(self):
-        self.draw.draw()
+        self.draw.draw_track(self.player_car)

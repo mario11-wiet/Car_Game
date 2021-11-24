@@ -1,7 +1,7 @@
 import os
 import pygame
 from src.settings import ASSETS_FOLDER, WINDOW_WIDTH, WINDOW_HEIGHT
-from src.GUI.scale_image import scale_image
+from src.GUI.convert_image import scale_image
 
 GRASS = pygame.image.load(os.path.join(ASSETS_FOLDER, 'grass.jpg'))
 GRASS = scale_image(GRASS, max(WINDOW_WIDTH / GRASS.get_width(), WINDOW_HEIGHT/GRASS.get_height()))
