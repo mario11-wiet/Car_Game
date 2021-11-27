@@ -2,7 +2,7 @@ import time
 
 
 class GameInfo:
-    LEVELS = 6
+    LEVELS = 8
 
     def __init__(self, level=1):
         self.level = level
