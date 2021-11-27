@@ -1,7 +1,6 @@
 import math
 
 import pygame
-import src.GUI.image_load as images
 
 
 class Car:
@@ -53,36 +52,3 @@ class Car:
         self.velocity = 0
 
 
-class PlayerCar(Car):
-    def __init__(self, max_velocity, rotation_velocity, start_position, image):
-        super().__init__(max_velocity, rotation_velocity, start_position, image)
-
-    def bounce(self):
-        self.velocity = -self.velocity
-        self.move()
-
-    def action(self):
-        keys = pygame.key.get_pressed()
-        moved = False
-        if keys[pygame.K_a]:
-            self.rotate(left=True)
-        if keys[pygame.K_d]:
-            self.rotate(right=True)
-        if keys[pygame.K_w]:
-            moved = True
-            self.move_forward()
-        if keys[pygame.K_s]:
-            moved = True
-            self.move_backward()
-        if not moved:
-            self.reduce_speed()
-        if self.collide(images.TRACK_BORDER_MASK) is not None:
-            self.bounce()
-
-        finish_point_collide = self.collide(images.FINISH_MASK, *images.FINISH_POSITION)
-        if finish_point_collide is not None:
-            if finish_point_collide[1] == 0:
-                self.bounce()
-            else:
-                self.reset()
-                print("finish")
