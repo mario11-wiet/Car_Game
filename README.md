@@ -35,11 +35,11 @@ python3 src/main.py || python src/main.py || py src/main.py
 * s - driving backwards
 * any key - start level
 
-<img src="https://github.com/mario11-wiet/Car_Game/blob/master/src/assets/photo_menu.png" width=auto height=250px alt="Menu">
+<img src="https://github.com/mario11-wiet/Car_Game/blob/master/src/assets/photo_menu.png" width=auto height=350px alt="Menu">
 
 ### Game has 8 levels of difficulty. When you win the eighth race, you win the game, otherwise you lose.
 
-<img src="https://github.com/mario11-wiet/Car_Game/blob/master/src/assets/photo_win.png" width=auto height=250px alt="Win">
+<img src="https://github.com/mario11-wiet/Car_Game/blob/master/src/assets/photo_win.png" width=auto height=350px alt="Win">
 
 ### Future modifications:
 
