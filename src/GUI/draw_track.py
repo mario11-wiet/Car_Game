@@ -6,7 +6,8 @@ import pygame
 class GameDrawer:
     def __init__(self, window):
         self.window = window
-        self.images = [(image.GRASS, (0, 0)), (image.TRACK, (0, 0))]
+        self.images = [(image.GRASS, (0, 0)), (image.TRACK, (0, 0)), (image.FINISH, image.FINISH_POSITION),
+                       (image.TRACK_BORDER, (0, 0))]
 
     def draw_track(self, car):
         for img, position in self.images:

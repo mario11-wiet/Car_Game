@@ -2,6 +2,7 @@ import pygame
 import settings
 from Game.Menu.menu import Menu
 
+
 def main():
     pygame.init()
     pygame.font.init()
@@ -14,4 +15,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-

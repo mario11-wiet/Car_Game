@@ -11,7 +11,7 @@ class Menu:
         self.running = True
         self.clock = pygame.time.Clock()
         self.FPS = 60
-        self.player_car = car.PlayerCar(4, 4, (180, 200), images.RED_CAR)
+        self.player_car = car.PlayerCar(5, 5, (180, 200), images.RED_CAR)
 
     def start(self):
         while self.running:
