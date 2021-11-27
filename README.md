@@ -46,3 +46,5 @@ python3 src/main.py || python src/main.py || py src/main.py
 * adding the ability to play with a friend
 * vehicle selection possible
 * vehicle speed configurations
+
+#### Inspired by [techwithtim](https://github.com/techwithtim)
