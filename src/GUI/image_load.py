@@ -1,8 +1,10 @@
 import os
 import pygame
 from src.settings import ASSETS_FOLDER, WINDOW_WIDTH, WINDOW_HEIGHT
-from src.GUI.convert_image import scale_image
+from src.GUI.convert_object import scale_image
+pygame.font.init()
 
+MAIN_FONT = pygame.font.SysFont("comicsans", 44)
 GRASS = pygame.image.load(os.path.join(ASSETS_FOLDER, 'grass.jpg'))
 GRASS = scale_image(GRASS, max(WINDOW_WIDTH / GRASS.get_width(), WINDOW_HEIGHT / GRASS.get_height()))
 GREEN_CAR = scale_image(pygame.image.load(os.path.join(ASSETS_FOLDER, 'green-car.png')), 0.5)

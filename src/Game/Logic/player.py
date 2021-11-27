@@ -1,5 +1,4 @@
 import pygame
-
 from src.Game.Logic.car import Car
 import src.GUI.image_load as images
 
@@ -22,7 +21,7 @@ class PlayerCar(Car):
         if keys[pygame.K_w]:
             moved = True
             self.move_forward()
-        if keys[pygame.K_s]:
+        elif keys[pygame.K_s]:
             moved = True
             self.move_backward()
         if not moved:

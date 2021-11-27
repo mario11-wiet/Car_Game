@@ -1,7 +1,5 @@
 import math
-
 import pygame
-
 from src.Game.Logic.car import Car
 
 
@@ -19,6 +17,10 @@ class ComputerCar(Car):
         self.calculate_angle()
         self.update_path_point()
         super().move()
+
+    def next_level(self, level):
+        self.reset()
+        self.velocity = self.max_velocity + (level - 1) * 0.35
 
     def calculate_angle(self):
         target_x, target_y = self.path[self.current_point]

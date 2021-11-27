@@ -1,5 +1,4 @@
 import math
-
 import pygame
 
 
@@ -50,5 +49,3 @@ class Car:
         self.x, self.y = self.start_position
         self.angle = 0
         self.velocity = 0
-
-
